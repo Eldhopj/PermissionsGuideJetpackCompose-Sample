@@ -8,15 +8,16 @@ class MainViewModel: ViewModel() {
     val visiblePermissionDialogQueue = mutableStateListOf<String>()
 
     fun dismissDialog() {
-        visiblePermissionDialogQueue.removeFirst()
+        visiblePermissionDialogQueue.removeFirst() //Remove the first added permission
     }
 
+    /** Adds non granted permissions **/
     fun onPermissionResult(
         permission: String,
         isGranted: Boolean
     ) {
         if(!isGranted && !visiblePermissionDialogQueue.contains(permission)) {
-            visiblePermissionDialogQueue.add(permission)
+            visiblePermissionDialogQueue.add(permission) //adds non granted permissions
         }
     }
 }

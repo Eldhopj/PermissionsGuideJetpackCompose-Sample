@@ -1,6 +1,5 @@
 package com.plcoding.permissionsguidecompose
 
-import android.Manifest
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,8 +13,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
+/**
+ * Rational Alert Dialog
+ *
+ * */
 @Composable
-fun PermissionDialog(
+fun RationalPermissionDialog(
     permissionTextProvider: PermissionTextProvider,
     isPermanentlyDeclined: Boolean,
     onDismiss: () -> Unit,
